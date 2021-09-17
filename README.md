@@ -1,5 +1,5 @@
-#Test Driven Development
-##The money example
+# Test Driven Development
+## The money example
 **List of tests we need**
 ````text
 $5 + 10chf = 10$ if rate = 2:1
