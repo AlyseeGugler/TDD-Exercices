@@ -7,10 +7,15 @@ namespace App\Chapter9;
  **/
 class Franc extends Money
 {
-    public function __construct($amount){
+    public function __construct($amount, string $currency){
         $this->amount = $amount;
+        $this->currency = $currency;
     }
     public function times(int $multiplier) :Money{
-        return new Franc($this->amount * $multiplier);
+        return Money::franc($this->amount * $multiplier);
+    }
+
+    public function currency() :string{
+        return $this->currency;
     }
 }
