@@ -22,4 +22,6 @@ abstract class Money
     }
 
     abstract function times(int $multiplier) :Money;
+
+    abstract function currency() :string;
 }
