@@ -1,6 +1,6 @@
 # Test Driven Development
 ## The money example
-**List of tests we need**
+**List of To Do**
 ````text
 $5 + 10chf = 10$ if rate = 2:1
 $5*2 = $10
@@ -15,34 +15,40 @@ Equal object
 Dollar/Franc duplication
 Common equals
 Common times
+Compare Francs with Dollars
 ````
 ### Chapter 1
-**Test to pass**
+**To Do**
 ````text
 $5*2 = $10
 ````
 ### Chapter 2
-**Test to pass**
+**To Do**
 ````text
 Dollar side effects
 ````
 ### Chapter 3
-**Test to pass**
+**To Do**
 ````text
 equals()
 ````
 ### Chapter 4
-**Test to pass**
+**To Do**
 ````text
 Make "amount" private
 ````
 ### Chapter 5
-**Test to pass**
+**To Do**
 ````text
 5CHF * 2 = 10CHF
 ````
 ### Chapter 6
-**Test to pass**
+**To Do**
 ````text
 Common equals
+````
+### Chapter 7
+**To Do**
+````text
+Compare Francs with Dollars
 ````
