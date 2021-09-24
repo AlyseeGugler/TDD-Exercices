@@ -7,7 +7,7 @@
 
 namespace App\Chapter10;
 
-abstract class Money
+class Money
 {
     protected $amount;
     protected $currency;
@@ -28,7 +28,9 @@ abstract class Money
         return new Franc($amount, "CHF");
     }
 
-    abstract function times(int $multiplier) :Money;
+    public function times(int $multiplier) :Money{
+        return null;
+    }
 
     public function currency() :string {
         return $this->currency;
