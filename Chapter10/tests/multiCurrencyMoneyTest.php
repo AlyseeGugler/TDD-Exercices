@@ -6,6 +6,7 @@
  **/
 namespace App\Chapter10\tests;
 use App\Chapter10\Money;
+use App\Chapter10\Franc;
 use PHPUnit\Framework\TestCase;
 
 class multiCurrencyMoneyTest extends TestCase
@@ -35,4 +36,9 @@ class multiCurrencyMoneyTest extends TestCase
         self::assertEquals("USD", Money::dollar(1)->currency());
         self::assertEquals("CHF", Money::franc(1)->currency());
     }
+
+    public function testDifferentClassEquality() {
+        self::assertTrue((new Money(10, "CHF"))->equals(new Franc(10, "CHF")));
+    }
+
 }
