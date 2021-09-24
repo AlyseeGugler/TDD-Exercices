@@ -41,3 +41,8 @@ Make "amount" private
 ````text
 5CHF * 2 = 10CHF
 ````
+### Chapter 6
+**Test to pass**
+````text
+Common equals
+````
