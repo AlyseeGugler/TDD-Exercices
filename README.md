@@ -17,6 +17,7 @@ Common equals
 Common times
 Compare Francs with Dollars
 Currency?
+Delete testFrancMultiplication?
 ````
 ### Chapter 1
 **To Do**
@@ -57,4 +58,9 @@ Compare Francs with Dollars
 **To Do**
 ````text
 Dollar/Franc duplication
+````
+### Chapter 9
+**To Do**
+````text
+Currency?
 ````
