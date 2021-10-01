@@ -74,3 +74,8 @@ Common times
 ````text
 Dollar/Franc duplication
 ````
+### Chapter 12
+**To Do**
+````text
+$5 + $5 = $10
+````

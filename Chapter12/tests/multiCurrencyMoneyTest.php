@@ -4,11 +4,10 @@
  * Date de création: 01.10.2021
  * Description:
  **/
-namespace App\Chapter11\tests;
-use App\Chapter11\Money;
-use App\Chapter11\Franc;
-use App\Chapter11\Dollar;
+namespace App\Chapter12\tests;
+use App\Chapter12\Money;
 use PHPUnit\Framework\TestCase;
+use App\Chapter12\Bank;
 
 class multiCurrencyMoneyTest extends TestCase
 {
@@ -28,6 +27,15 @@ class multiCurrencyMoneyTest extends TestCase
     public function testCurrency(){
         self::assertEquals("USD", Money::dollar(1)->currency());
         self::assertEquals("CHF", Money::franc(1)->currency());
+    }
+
+    public function testSimpleAddition(){
+        $five = Money::dollar(5);
+        $sum = $five->plus($five);
+        self::assertEquals(Money::dollar(10),$sum);
+        $bank = new Bank();
+        $reduced = $bank->reduce($sum, "USD");
+        self::assertEquals(Money::dollar(10), $reduced);
     }
 
 }
