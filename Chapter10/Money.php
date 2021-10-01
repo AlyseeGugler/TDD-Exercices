@@ -18,8 +18,10 @@ class Money
     }
 
     public function equals(object $money) :bool {
-        return $this->amount == $money->amount && get_class($this)==get_class($money);
+        return $this->amount == $money->amount
+            && $this->currency()==$money->currency();
     }
+
     static function dollar(int $amount) :Money {
         return new Dollar($amount, "USD");
     }
@@ -29,7 +31,7 @@ class Money
     }
 
     public function times(int $multiplier) :Money{
-        return null;
+        return new Money($this->amount * $multiplier, $this->currency);
     }
 
     public function currency() :string {

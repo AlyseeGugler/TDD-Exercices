@@ -7,20 +7,21 @@
 namespace App\Chapter10\tests;
 use App\Chapter10\Money;
 use App\Chapter10\Franc;
+use App\Chapter10\Dollar;
 use PHPUnit\Framework\TestCase;
 
 class multiCurrencyMoneyTest extends TestCase
 {
     public function testDollarMultiplication(){
         $five = Money::dollar(5);
-        self::assertEquals(Money::dollar(10),$five->times(2));
-        self::assertEquals(Money::dollar(15),$five->times(3));
+        self::assertEquals(new Money(10, "USD"),$five->times(2));
+        self::assertEquals(new Money(15, "USD"),$five->times(3));
     }
 
     public function testFrancMultiplication(){
         $five = Money::franc(5);
-        self::assertEquals(Money::franc(10),$five->times(2));
-        self::assertEquals(Money::franc(15),$five->times(3));
+        self::assertEquals(new Money(10, "CHF"),$five->times(2));
+        self::assertEquals(new Money(15, "CHF"),$five->times(3));
     }
 
     /** Triangulation */
@@ -39,6 +40,7 @@ class multiCurrencyMoneyTest extends TestCase
 
     public function testDifferentClassEquality() {
         self::assertTrue((new Money(10, "CHF"))->equals(new Franc(10, "CHF")));
+        self::assertTrue((new Money(10, "USD"))->equals(new Dollar(10, "USD")));
     }
 
 }
