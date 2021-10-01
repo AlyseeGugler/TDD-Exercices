@@ -5,7 +5,7 @@
  * Description:
  **/
 
-namespace App\Chapter11;
+namespace App\Chapter12;
 
 class Money
 {

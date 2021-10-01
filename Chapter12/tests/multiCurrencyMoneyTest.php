@@ -4,10 +4,8 @@
  * Date de création: 01.10.2021
  * Description:
  **/
-namespace App\Chapter11\tests;
-use App\Chapter11\Money;
-use App\Chapter11\Franc;
-use App\Chapter11\Dollar;
+namespace App\Chapter12\tests;
+use App\Chapter12\Money;
 use PHPUnit\Framework\TestCase;
 
 class multiCurrencyMoneyTest extends TestCase
