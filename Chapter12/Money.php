@@ -7,7 +7,7 @@
 
 namespace App\Chapter12;
 
-class Money
+class Money implements Expression
 {
     protected $amount;
     protected $currency;
@@ -36,5 +36,9 @@ class Money
 
     public function currency() :string {
         return $this->currency;
+    }
+
+    public function plus(Money $addend) :Expression{
+        return new Money($this->amount + $addend->amount, $this->currency);
     }
 }
