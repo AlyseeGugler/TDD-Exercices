@@ -9,5 +9,5 @@ namespace App\Chapter13;
 
 interface Expression
 {
-
+    public function reduce(string $to);
 }

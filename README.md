@@ -84,4 +84,5 @@ $5 + $5 = $10
 **To Do**
 ````text
 $5 + $5 = $10
+Bank->reduce(Money)
 ````

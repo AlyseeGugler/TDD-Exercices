@@ -30,6 +30,10 @@ class Money implements Expression
         return new Money($amount, "CHF");
     }
 
+    public function reduce(string $to) :Money{
+        return $this;
+    }
+
     public function times(int $multiplier) :Money{
         return new Money($this->amount * $multiplier, $this->currency);
     }

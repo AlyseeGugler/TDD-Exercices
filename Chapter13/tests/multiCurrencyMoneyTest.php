@@ -51,4 +51,10 @@ class multiCurrencyMoneyTest extends TestCase
         self::assertEquals(Money::dollar(7), $result);
     }
 
+    public function testReduceMoney() {
+        $bank = new Bank();
+        $result = $bank->reduce(Money::dollar(1),"USD");
+        self::assertEquals(Money::dollar(1),$result);
+    }
+
 }
