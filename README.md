@@ -86,3 +86,9 @@ $5 + $5 = $10
 $5 + $5 = $10
 Bank->reduce(Money)
 ````
+
+### Chapter 14
+**To Do**
+````text
+Reduce Money with conversion
+````
