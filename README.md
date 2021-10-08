@@ -92,3 +92,9 @@ Bank->reduce(Money)
 ````text
 Reduce Money with conversion
 ````
+### Chapter 15
+**To Do**
+````text
+$5 + 10CHF = $10 if rate is 2:1
+````
+

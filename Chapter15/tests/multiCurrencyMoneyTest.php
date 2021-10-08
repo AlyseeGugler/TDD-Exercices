@@ -5,6 +5,7 @@
  * Description:
  **/
 namespace App\Chapter15\tests;
+use App\Chapter15\Expression;
 use App\Chapter15\Money;
 use PHPUnit\Framework\TestCase;
 use App\Chapter15\Bank;
@@ -37,6 +38,7 @@ class multiCurrencyMoneyTest extends TestCase
         $reduced = $bank->reduce($sum, "USD");
         self::assertEquals(Money::dollar(10), $reduced);
     }
+
     public function testPlusReturnsSum() {
         $five = Money::dollar(5);
         $sum = $five->plus($five);
@@ -67,5 +69,14 @@ class multiCurrencyMoneyTest extends TestCase
 
     public function testIdentityRate() {
         self::assertEquals(1, (new Bank())->rate("USD","USD"));
+    }
+
+    public function testMixedAddition() {
+        $fiveBucks = Money::dollar(5);
+        $tenFrancs = Money::franc(10);
+        $bank = new Bank();
+        $bank->addRate("CHF", "USD", 2);
+        $result = $bank->reduce($fiveBucks->plus($tenFrancs),"USD");
+        self::assertEquals(Money::dollar(10), $result);
     }
 }
