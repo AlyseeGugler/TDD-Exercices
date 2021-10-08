@@ -31,6 +31,7 @@
       "App\\Chapter13\\": "Chapter13",
       "App\\Chapter14\\": "Chapter14",
       "App\\Chapter15\\": "Chapter15",
+      "App\\Chapter16\\": "Chapter16",
       "PHPUnit\\Framework\\": "vendor/phpunit/phpunit/src/Framework/"
     }
   }
